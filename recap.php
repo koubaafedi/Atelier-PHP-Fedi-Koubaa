@@ -2,13 +2,13 @@
 <?php
     if (isset($_POST['nom']) and isset($_POST['prenom']) and isset($_POST['nbSandwitches']) and
         isset($_POST['adresse']) and isset($_POST['type']) and isset($_POST['ingredients'])){
-        $nom=$_POST['nom'];
-        $prenom=$_POST['prenom'];
-        $nbSandwitches=$_POST['nbSandwitches'];
-        $adresse=$_POST['adresse'];
-        $type=$_POST['type'];
+        $nom=htmlspecialchars($_POST['nom']);
+        $prenom=htmlspecialchars($_POST['prenom']);
+        $nbSandwitches=htmlspecialchars($_POST['nbSandwitches']);
+        $adresse=htmlspecialchars($_POST['adresse']);
+        $type=htmlspecialchars($_POST['type']);
         $ingredients=$_POST['ingredients'];
-        $total=$nbSandwitches > 10 ? 4*0.9*$nbSandwitches : 4*$nbSandwitches;
+        $total=$nbSandwitches > 10 ? 4*0.9*htmlspecialchars($nbSandwitches) : 4*htmlspecialchars($nbSandwitches);
         ?>
         <div class="card text-white bg-primary mb-3 mx-auto" style="width: 18rem;">
             <div class="card-header">
