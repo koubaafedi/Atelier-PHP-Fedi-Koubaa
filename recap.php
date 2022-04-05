@@ -26,8 +26,15 @@
                 Total = <?=$total?>
             </div>
         </div>
+
         <?php
     }
+    if (isset($_FILES['cin'])){
+        if (file_exists($_FILES['cin']['tmp_name'])){
+            move_uploaded_file($_FILES['cin']['tmp_name'], 'C:\Users\Utilisateur\Desktop\RT2 2021-2022\My Files\Sem2\Web\atelier php\uploads');
+        }
+    }
+    phpinfo();
 ?>
 <?php include_once 'footer.php'?>
 
