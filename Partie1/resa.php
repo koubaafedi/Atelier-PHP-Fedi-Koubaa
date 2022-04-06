@@ -1,4 +1,4 @@
-<?php include_once 'header.php'?>
+<?php include_once '../header.php' ?>
 <div class="container ">
     <form action="recap.php" method="post" enctype="multipart/form-data">
         <div class="mb-3">
@@ -49,4 +49,4 @@
         <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
     </form>
 </div>
-<?php include_once 'footer.php'?>
+<?php include_once '../footer.php' ?>
