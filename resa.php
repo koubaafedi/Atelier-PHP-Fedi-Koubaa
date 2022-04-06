@@ -46,7 +46,7 @@
             <label for="cin" class="form-label">S'il vous plaît ajouter votre CIN :</label>
             <input type="file" class="form-control" id="cin" name="cin" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
     </form>
 </div>
 <?php include_once 'footer.php'?>

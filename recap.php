@@ -31,10 +31,18 @@
     }
     if (isset($_FILES['cin'])){
         if (file_exists($_FILES['cin']['tmp_name'])){
-            move_uploaded_file($_FILES['cin']['tmp_name'], 'C:\Users\Utilisateur\Desktop\RT2 2021-2022\My Files\Sem2\Web\atelier php\uploads');
-        }
+            $targetDir="uploads/";
+            $fileType = $_FILES['fileToUpload']['type'];
+            $array = explode('.', $_FILES['cin']['name']);
+            $fileExtension = strtolower(end($array));
+            //$targetFile=$targetDir.basename($_FILES['cin']['name']);
+            $targetFile=$targetDir.uniqid().'.'.$fileExtension;
+            echo $targetFile;
+            move_uploaded_file($_FILES['cin']['tmp_name'], $targetFile);
+
     }
-    phpinfo();
+}
+
 ?>
 <?php include_once 'footer.php'?>
 
