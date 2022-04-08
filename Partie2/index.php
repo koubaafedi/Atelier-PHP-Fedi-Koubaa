@@ -20,6 +20,8 @@ if (isset($_POST['vote']) and isset($_POST['reponse'])){
         </div>
         <?php
     }
+}else{
+    include '../header.php';
 }
 ?>
 <div class="mx-0 mx-sm-auto">
